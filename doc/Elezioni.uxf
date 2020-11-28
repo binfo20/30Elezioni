@@ -1,8 +1,12 @@
-<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>90</x><y>340</y><w>210</w><h>80</h></coordinates><panel_attributes>ListaCandidati
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>151</x><y>220</y><w>210</w><h>110</h></coordinates><panel_attributes>ListaCandidati
 --
 - NumCandidati: int
 - NomeGruppo: string
-- ListaC[]: Candidato</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>0</y><w>210</w><h>120</h></coordinates><panel_attributes>Votante
+- ListaC[]: Candidato
+--
++ rimuoviC()
++ modificaC()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>421</x><y>20</y><w>210</w><h>120</h></coordinates><panel_attributes>Votante
 --
 - Email: string
 - NumTelefono: string
@@ -13,13 +17,13 @@
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>10</y><w>210</w><h>90</h></coordinates><panel_attributes>Candidato
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>151</x><y>20</y><w>210</w><h>120</h></coordinates><panel_attributes>Candidato
 --
 - nome: string
 - cognome: string
 - sesso: bool
 - età: int
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>350</y><w>210</w><h>140</h></coordinates><panel_attributes>Voto
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>421</x><y>360</y><w>210</w><h>140</h></coordinates><panel_attributes>Voto
 --
 - data: string
 - orario: string
@@ -29,8 +33,8 @@
 + controlloDataOra()
 + controlloPin()
 + controlloVoto()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>230</y><w>70</w><h>140</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>550</y><w>210</w><h>170</h></coordinates><panel_attributes>Conteggio
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>521</x><y>320</y><w>70</w><h>60</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>701</x><y>570</y><w>210</w><h>170</h></coordinates><panel_attributes>Conteggio
 --
 - VotiTot: int
 - ClassificaNomi[]: string
@@ -41,16 +45,33 @@
 + ConteggioVoti()
 + ClassificaTot()
 + CalcolaPercentuale()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>370</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;20;160;20</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>90</y><w>30</w><h>270</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;250;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>292</x><y>60</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>170</y><w>210</w><h>70</h></coordinates><panel_attributes>ListaVotanti
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>261</x><y>320</y><w>180</w><h>150</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;10;10;130;160;130</additional_attributes></element><element><id>Relation</id><coordinates><x>261</x><y>130</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>353</x><y>90</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>421</x><y>220</y><w>210</w><h>110</h></coordinates><panel_attributes>ListaVotanti
 --
-- NumVotanti: int
-- ListaV[]: Votante</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>350</y><w>210</w><h>130</h></coordinates><panel_attributes>RaccoltaVoti
+- NumTot: int
+- ListaV[]: Votante
+--
++ rimuoviV()
++ modificaV()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>801</x><y>490</y><w>70</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>701</x><y>360</y><w>210</w><h>140</h></coordinates><panel_attributes>RaccoltaVoti
 --
 - numVoti: int
 --
 + controlloDoppioVoto()
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>394</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>830</x><y>470</y><w>70</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>110</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>621</x><y>414</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;20;80;20</additional_attributes></element><element><id>Relation</id><coordinates><x>521</x><y>130</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>421</x><y>570</y><w>210</w><h>170</h></coordinates><panel_attributes>&lt;&lt;main&gt;&gt;
+Package::FatClass
+{Some Properties}
+--
+
+--
+
+--
+Responsabilities: si occupa dell'input e
+dell'output.
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>521</x><y>490</y><w>70</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>621</x><y>610</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>641</x><y>240</y><w>380</w><h>40</h></coordinates><panel_attributes>Abbiamo pensato di fare ListaCandidati figlia di ListaVotanti ma
+i metodi agiscono su variabili diverse quindi non sapevamo come fare.</panel_attributes><additional_attributes></additional_attributes></element></diagram>
