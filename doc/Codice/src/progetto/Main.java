@@ -2,6 +2,36 @@ package progetto;
 import java.util.Scanner;
 public class Main {
 
+    /**
+     * Allora, mi sembra che stiate ancora lavorando in modalità C++
+     * Nel senso che usate Candidati come uno struct, e la logica è nel main.
+     *
+     * Avete  giustamente l'oggetto ListaVotanti?
+     * Bene questo oggetto, e SOLO QUESTO deve occuparsi della lista.
+     * Deve inserire, togliere, stampare la lista
+     * Se volete inserire tutti i dati, magari fare un metodo .inserisci() che si occupa nell'inserimento
+     * di tutti i votanti. E potrebbe aver il metodo .salva() e .carica() [Ma questa è una mia idea, ci sono
+     * altre strade]
+     *
+     * Analogo per i candidati, che magari riuscite a riciclare parte del codice
+     *
+     * Così separate le responsabilità, che altrimenti sono tutte di main() e quindi non potete spartirle tra
+     * i diversi programmatori.
+     *
+     * Main potrebbe occuparsi dei dati globali della votazione (che mi pare siano in voto, ma una cosa è
+     * l'oraraio di un VOTO (ovvero quando io esprimo il voto) e una cosa è l'orario di una VOTAZIONE
+     * tipo, si vota Domenica 12 marzo dalle 7 alle 23. Sono cose diverse, e secondo me le avete
+     * messe assieme.
+     *
+     * Manca tutto il Javadoc
+     *
+     * Rimettete a posto l'UML dopo, che per il resto va anche abbanstanza bene
+     *
+     *
+     * @param args
+     */
+
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         ListaVotanti listaVotanti = new ListaVotanti();
