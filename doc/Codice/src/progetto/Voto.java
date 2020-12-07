@@ -5,6 +5,20 @@ public class Voto {
     private String orario;
     private boolean isScritto;
     private String voto;
+    private int VotiTot;
+    private int id;
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setVotiTot(ListaCandidati listaCandidati, ListaVotanti listaVotanti) {
+        VotiTot = listaCandidati.getNumCandidati() + listaVotanti.getNumTot();
+    }
 
     public void setData(String data) {
         this.data = data;
@@ -20,6 +34,10 @@ public class Voto {
 
     public void setVoto(String voto) {
         this.voto = voto;
+    }
+
+    public int getVotiTot() {
+        return VotiTot;
     }
 
     public String getData() {
@@ -42,4 +60,10 @@ public class Voto {
 
         return true;
     }
+
+    public void controlloVoto(ListaCandidati listaCandidati, Candidato candidato){
+        for (int i = 0; i < listaCandidati.getNumCandidati(); i++) {
+        }
+    }
+
 }

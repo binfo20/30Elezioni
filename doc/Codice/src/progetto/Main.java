@@ -1,4 +1,5 @@
 package progetto;
+import java.util.List;
 import java.util.Scanner;
 public class Main {
 
@@ -28,53 +29,94 @@ public class Main {
      * Rimettete a posto l'UML dopo, che per il resto va anche abbanstanza bene
      *
      *
-     * @param args
+     *
      */
 
 
-    public static void main(String[] args) {
+    public static void inserimentoV(ListaVotanti listaVotanti, Votante votante){
         Scanner in = new Scanner(System.in);
-        ListaVotanti listaVotanti = new ListaVotanti();
         System.out.println("Quanti votanti ci sono?: ");
         listaVotanti.setNumTot(in.nextInt());
-        Votante[] lisV = new Votante[listaVotanti.getNumTot()];
-        ListaCandidati listaCandidati = new ListaCandidati();
-        int numC=0;
-        for (int i = 0; i < listaVotanti.getNumTot(); i++) {
-            lisV[i] = new Votante();
-        }
+        listaVotanti.inizializzaV();
         in.nextLine();
         for (int i = 0; i < listaVotanti.getNumTot(); i++) {
-            String isCandidato;
             System.out.println("Inserisci l'email: ");
-            lisV[i].setEmail(in.nextLine());
+            votante.setEmail(in.nextLine());
             System.out.println("Inserisci numero di telefono: ");
-            lisV[i].setNumTelefono(in.nextLine());
+            votante.setNumTelefono(in.nextLine());
             System.out.println("Inserisci la password: ");
-            lisV[i].setPassword(in.nextLine());
-            System.out.println("Inserisci l'username");
-            lisV[i].setUsername(in.nextLine());
-            System.out.println("Sei anche un candidato?: si o no");
-            isCandidato = in.nextLine();
-            lisV[i].generaPin();
-            if(isCandidato.equalsIgnoreCase("si")) lisV[i].setVotato(true);
-            else if(isCandidato.equalsIgnoreCase("no")) lisV[i].setVotato(false);
-            else {
-                System.out.println("Valore non valido, considerato automaticamente non candidato");
-                lisV[i].setVotato(false);
-            }
-            if(lisV[i].isVotato()){
-                listaCandidati.setNumCandidati(numC);
-            }
+            votante.setPassword(in.nextLine());
+            System.out.println("Inserisci l'username: ");
+            votante.setUsername(in.nextLine());
+            listaVotanti.inserisciV(i,votante);
         }
-        for (int i = 0; i < listaVotanti.getNumTot(); i++) {
-            System.out.println(lisV[i]);
-        }
-        System.out.println(numC);
-        listaCandidati.setNumCandidati(numC);
-        Candidato[] lisC = new Candidato[listaCandidati.getNumCandidati()];
-        for (int i = 0; i <listaCandidati.getNumCandidati(); i++) {
+    }
 
+    public static void inserimentoC(ListaCandidati listaCandidati, Candidato candidato){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Quanti candidati ci sono?: ");
+        listaCandidati.setNumCandidati(in.nextInt());
+        listaCandidati.inizializzaC();
+        in.nextLine();
+        for(int i = 0; i < listaCandidati.getNumCandidati(); i++){
+            System.out.println("Inserisci l'email: ");
+            candidato.setEmail(in.nextLine());
+            System.out.println("Inserisci il tuo numero di telefono: ");
+            candidato.setNumTelefono(in.nextLine());
+            System.out.println("Inserisci la password: ");
+            candidato.setPassword(in.nextLine());
+            System.out.println("Inserisci l'username: ");
+            candidato.setUsername(in.nextLine());
+            System.out.println("Inserisci il tuo nome: ");
+            candidato.setNome(in.nextLine());
+            System.out.println("Inserisci il cognome: ");
+            candidato.setCognome(in.nextLine());
+            System.out.println("Inserisci la tua età: ");
+            candidato.setEta(in.nextInt());
+            in.nextLine();
+            do{
+                System.out.println("Di che sesso sei?: maschio o femmina ");
+                candidato.setSesso(in.nextLine());
+            }while(!candidato.getSesso().equalsIgnoreCase("maschio") && !candidato.getSesso().equalsIgnoreCase("femmina"));
+            listaCandidati.inserisciC(i,candidato);
+        }
+    }
+
+    public static void inserimentoVoto(Voto voto, ListaVotanti listaVotanti, ListaCandidati listaCandidati, Candidato candidato){
+        Scanner in = new Scanner(System.in);
+        voto.setVotiTot(listaCandidati, listaVotanti);
+        String isVuoto;
+        for(int i=0; i<voto.getVotiTot(); i++){
+            do {
+                System.out.println("Vuoi lasciare carta bianca?: si o no");
+                isVuoto = in.nextLine();
+                if (isVuoto.equalsIgnoreCase("si")) voto.setScritto(true);
+                else if (isVuoto.equalsIgnoreCase("no")) voto.setScritto(false);
+            }while(!isVuoto.equalsIgnoreCase("si") && !isVuoto.equalsIgnoreCase("no"));
+            System.out.println("Chi vuoi votare: ");
+            System.out.println(listaCandidati);
+            System.out.println("Inserisci l'ID del candidato: ");
+            voto.setId(in.nextInt());
+            voto.controlloVoto(listaCandidati, candidato);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Votante votante = new Votante();
+        Candidato candidato = new Candidato();
+        ListaVotanti listaVotanti = new ListaVotanti();
+        ListaCandidati listaCandidati = new ListaCandidati();
+        Voto voto = new Voto();
+        int menu;
+        while(true) {
+            System.out.println("Cosa vuoi fare: inserimento votanti(1), inserimento candidati(2), inserimento voti(3)");
+            menu = in.nextInt();
+            switch (menu) {
+                case (1) -> inserimentoV(listaVotanti, votante);
+                case (2) -> inserimentoC(listaCandidati, candidato);
+                case (3) -> inserimentoVoto(voto, listaVotanti, listaCandidati, candidato);
+            }
         }
     }
 }

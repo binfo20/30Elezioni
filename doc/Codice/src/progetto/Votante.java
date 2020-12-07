@@ -8,7 +8,6 @@ public class Votante {
     private String pin;
     private String password;
     private String username;
-    private boolean isVotato;
 
     public Votante() {
         email="";
@@ -16,17 +15,8 @@ public class Votante {
         pin="";
         password="";
         username="";
-        isVotato=true;
     }
-
-    public boolean isVotato() {
-        return isVotato;
-    }
-
-    public void setVotato(boolean votato) {
-        isVotato = votato;
-    }
-
+    
     public String getUsername() {
         return username;
     }
@@ -77,7 +67,6 @@ public class Votante {
                 ", pin='" + pin + '\'' +
                 ", password='" + password + '\'' +
                 ", username='" + username + '\'' +
-                ", isVotato=" + isVotato +
                 '}';
     }
 }

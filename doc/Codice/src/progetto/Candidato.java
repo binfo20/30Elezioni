@@ -1,17 +1,28 @@
 package progetto;
 
+import java.util.Random;
+
 public class Candidato extends Votante {
     private String nome;
     private String cognome;
-    private boolean isMale;
+    private String sesso;
     private int eta;
+    private int idC;
 
     public Candidato(){
         nome="";
         cognome="";
-        isMale=true;
+        sesso="";
         eta=0;
+        idC=0;
     }
+
+    public void generaIdC(ListaCandidati listaCandidati){
+        Random random = new Random();
+        idC = random.nextInt(listaCandidati.getNumCandidati());
+    }
+
+    public int getIdC() { return idC; }
 
     public int getEta() {
         return eta;
@@ -21,13 +32,9 @@ public class Candidato extends Votante {
         this.eta = eta;
     }
 
-    public boolean isMale() {
-        return isMale;
-    }
+    public void setSesso(String sesso) { this.sesso = sesso; }
 
-    public void setMale(boolean male) {
-        isMale = male;
-    }
+    public String getSesso() { return sesso; }
 
     public String getCognome() {
         return cognome;
@@ -49,8 +56,9 @@ public class Candidato extends Votante {
         return "Candidato{" +
                 "nome='" + nome + '\'' +
                 ", cognome='" + cognome + '\'' +
-                ", isMale=" + isMale +
+                ", sesso='" + sesso + '\'' +
                 ", eta=" + eta +
+                ", idC=" + idC +
                 '}';
     }
 }
