@@ -1,7 +1,5 @@
 package progetto;
 
-import java.util.Random;
-
 public class Candidato extends Votante {
     private String nome;
     private String cognome;
@@ -17,10 +15,9 @@ public class Candidato extends Votante {
         idC=0;
     }
 
-    public void generaIdC(ListaCandidati listaCandidati){
-        Random random = new Random();
-        idC = random.nextInt(listaCandidati.getNumCandidati());
-    }
+    //Genera l'ID che viene assegnato al candidato
+
+    public void setIdC(int i) { idC = i; }
 
     public int getIdC() { return idC; }
 

@@ -8,6 +8,13 @@ public class ListaVotanti {
         return listaV;
     }
 
+    public int getNumTot() { return NumTot; }
+
+    public void setNumTot(int numTot) {
+        NumTot = numTot;
+    }
+
+    //Crea un votante per ogni indirizzo della listaV
     public void inizializzaV(){
         listaV = new Votante[NumTot];
         for(int i=0; i<NumTot; i++){
@@ -15,12 +22,7 @@ public class ListaVotanti {
         }
     }
 
-    public int getNumTot() { return NumTot; }
-
-    public void setNumTot(int numTot) {
-        NumTot = numTot;
-    }
-
+    //Inserisco i parametri che ho assegnato a votante e li inserisco nell'indirizzo "i" di listaV
     public void inserisciV(int i, Votante votante){
         listaV[i].setEmail(votante.getEmail());
         listaV[i].setUsername(votante.getUsername());
@@ -28,6 +30,7 @@ public class ListaVotanti {
         listaV[i].setNumTelefono(votante.getNumTelefono());
     }
 
+    //Data una certa posizione rimuove il contenuto di questo nella lista
     public void rimuoviV(int posV){
         listaV[posV] = null;
     }

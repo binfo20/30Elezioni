@@ -1,6 +1,6 @@
 package progetto;
-import java.util.List;
 import java.util.Scanner;
+
 public class Main {
 
     /**
@@ -82,24 +82,75 @@ public class Main {
         }
     }
 
-    public static void inserimentoVoto(Voto voto, ListaVotanti listaVotanti, ListaCandidati listaCandidati, Candidato candidato){
+    public static void inserimentoVoto(Voto voto, ListaVotanti listaVotanti, ListaCandidati listaCandidati, Candidato candidato, Conteggio conteggio){
         Scanner in = new Scanner(System.in);
         voto.setVotiTot(listaCandidati, listaVotanti);
         String isVuoto;
+        voto.inizializzaContaVoti();
         for(int i=0; i<voto.getVotiTot(); i++){
-            do {
-                System.out.println("Vuoi lasciare carta bianca?: si o no");
-                isVuoto = in.nextLine();
-                if (isVuoto.equalsIgnoreCase("si")) voto.setScritto(true);
-                else if (isVuoto.equalsIgnoreCase("no")) voto.setScritto(false);
-            }while(!isVuoto.equalsIgnoreCase("si") && !isVuoto.equalsIgnoreCase("no"));
-            System.out.println("Chi vuoi votare: ");
-            System.out.println(listaCandidati);
-            System.out.println("Inserisci l'ID del candidato: ");
-            voto.setId(in.nextInt());
-            voto.controlloVoto(listaCandidati, candidato);
+            System.out.println("Vuoi scrivere voto bianco?: si o no");
+            isVuoto = in.nextLine();
+            if (isVuoto.equalsIgnoreCase("si")) voto.setScritto(false);
+            else if (isVuoto.equalsIgnoreCase("no")) voto.setScritto(true);
+            else {
+                while(!isVuoto.equalsIgnoreCase("si") && !isVuoto.equalsIgnoreCase("no")){
+                    System.out.println("Risposta non chiara, vuoi scrivere voto bianco?: si o no?: ");
+                    if (isVuoto.equalsIgnoreCase("si")) voto.setScritto(false);
+                    else if (isVuoto.equalsIgnoreCase("no")) voto.setScritto(true);
+                }
+            }
+            if(voto.isScritto() && voto.controlloDataOra()){
+                System.out.println("Chi vuoi votare: ");
+                System.out.println(listaCandidati);
+                System.out.println("Inserisci l'ID del candidato: ");
+                voto.setId(in.nextInt());
+                voto.controlloVoto(listaCandidati, candidato);
+                in.nextLine();
+            }
+            else if(!voto.controlloDataOra()){
+                System.out.println("Al momento la votazione non è aperta");
+            }
+            else{
+                conteggio.setSchedeBianche(conteggio.getSchedeBianche());
+            }
         }
     }
+
+    public static void inserimentoDataOra(Voto voto) {
+        Scanner in = new Scanner(System.in);
+        int orarioInizio;
+        int orarioFine;
+        System.out.println("A che ora iniziano le votazioni?: ");
+        voto.setOrarioInizio(in.nextLine());
+        System.out.println("A che ora finiscono le votazioni?: ");
+        voto.setOrarioFine(in.nextLine());
+        orarioInizio = Integer.parseInt(voto.getOrarioInizio());
+        orarioFine = Integer.parseInt(voto.getOrarioFine());
+        while(orarioInizio>orarioFine){
+            System.out.println("L'orario di inizio non può essere dopo l'orario di fine");
+            System.out.println("A che ora iniziano le votazioni?: ");
+            voto.setOrarioInizio(in.nextLine());
+            System.out.println("A che ora finiscono le votazioni?: ");
+            voto.setOrarioFine(in.nextLine());
+            orarioInizio = Integer.parseInt(voto.getOrarioInizio());
+            orarioFine = Integer.parseInt(voto.getOrarioFine());
+        }
+        while(orarioInizio<0 || orarioInizio >24 || orarioFine<0 || orarioFine>24){
+            System.out.println("Sono accettati solo numeri da 0 a 24");
+            System.out.println("A che ora iniziano le votazioni?: ");
+            voto.setOrarioInizio(in.nextLine());
+            System.out.println("A che ora finiscono le votazioni?: ");
+            voto.setOrarioFine(in.nextLine());
+            orarioInizio = Integer.parseInt(voto.getOrarioInizio());
+            orarioFine = Integer.parseInt(voto.getOrarioFine());
+        }
+        voto.setOrarioAttuale();
+    }
+
+    public static void stampa(){
+
+    }
+
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -107,15 +158,19 @@ public class Main {
         Candidato candidato = new Candidato();
         ListaVotanti listaVotanti = new ListaVotanti();
         ListaCandidati listaCandidati = new ListaCandidati();
+        Conteggio conteggio = new Conteggio();
         Voto voto = new Voto();
         int menu;
-        while(true) {
-            System.out.println("Cosa vuoi fare: inserimento votanti(1), inserimento candidati(2), inserimento voti(3)");
+        boolean continua=true;
+        while(continua) {
+            System.out.println("Cosa vuoi fare: uscire(0), inserimento votanti(1), inserimento candidati(2), inserimento voti(3), inserimento data e ora(4)");
             menu = in.nextInt();
             switch (menu) {
+                case (0) -> continua=false;
                 case (1) -> inserimentoV(listaVotanti, votante);
                 case (2) -> inserimentoC(listaCandidati, candidato);
-                case (3) -> inserimentoVoto(voto, listaVotanti, listaCandidati, candidato);
+                case (3) -> inserimentoVoto(voto, listaVotanti, listaCandidati, candidato, conteggio);
+                case (4) -> inserimentoDataOra(voto);
             }
         }
     }

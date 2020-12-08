@@ -1,17 +1,10 @@
 package progetto;
 
 public class Conteggio {
-    private Candidato ClassificaNomi[];
-    private Voto ClassificaVoti[];
+    private Candidato[] ClassificaNomi;
+    private Voto[] ClassificaVoti;
     private double percentuale;
     private int SchedeBianche;
-
-    public Conteggio(Candidato[] classificaNomi, Voto[] classificaVoti, double percentuale, int schedeBianche) {
-        ClassificaNomi = classificaNomi;
-        ClassificaVoti = classificaVoti;
-        this.percentuale = percentuale;
-        SchedeBianche = schedeBianche;
-    }
 
     public void setClassificaNomi(Candidato[] classificaNomi) {
         ClassificaNomi = classificaNomi;
@@ -26,7 +19,7 @@ public class Conteggio {
     }
 
     public void setSchedeBianche(int schedeBianche) {
-        SchedeBianche = schedeBianche;
+        SchedeBianche = schedeBianche+1;
     }
 
     public Candidato[] getClassificaNomi() {

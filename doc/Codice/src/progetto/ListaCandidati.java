@@ -2,7 +2,7 @@ package progetto;
 
 import java.util.Arrays;
 
-class ListaCandidati {
+class ListaCandidati{
 
     private int NumCandidati;
     private String NomeGruppo;
@@ -11,13 +11,6 @@ class ListaCandidati {
     public ListaCandidati(){
         NumCandidati=0;
         NomeGruppo="";
-    }
-
-    public void inizializzaC(){
-        listaC = new Candidato[NumCandidati];
-        for(int i=0; i<NumCandidati; i++){
-            listaC[i] = new Candidato();
-        }
     }
 
     public void setListaC(Candidato[] listaC) {
@@ -44,6 +37,21 @@ class ListaCandidati {
         NomeGruppo = nomeGruppo;
     }
 
+    public String toString() {
+        return "ListaCandidati{" +
+                "listaC=" + Arrays.toString(listaC) +
+                '}';
+    }
+
+    //Crea un candidato per ogni indirizzo della listaC
+    public void inizializzaC(){
+        listaC = new Candidato[NumCandidati];
+        for(int i=0; i<NumCandidati; i++){
+            listaC[i] = new Candidato();
+        }
+    }
+
+    //Inserisco i parametri che ho messo in candidato nel main e li inserisco nell'indirizzo "i" della listaC
     public void inserisciC(int i, Candidato candidato){
         listaC[i].setEmail(candidato.getEmail());
         listaC[i].setUsername(candidato.getUsername());
@@ -53,19 +61,29 @@ class ListaCandidati {
         listaC[i].setEta(candidato.getEta());
         listaC[i].setNome(candidato.getNome());
         listaC[i].setSesso(candidato.getSesso());
+        listaC[i].setIdC(i);
+        listaC[i].generaPin();
+    }
+    //Ottengo i parametri del candidato che ho assegnato all'indirizzo "i" passato
+    public void ottieniC(int i, Candidato candidato){
+        candidato.setIdC(listaC[i].getIdC());
+        candidato.setEmail(listaC[i].getEmail());
+        candidato.setUsername(listaC[i].getUsername());
+        candidato.setPassword(listaC[i].getPassword());
+        candidato.setNumTelefono(listaC[i].getNumTelefono());
+        candidato.setCognome(listaC[i].getCognome());
+        candidato.setEta(listaC[i].getEta());
+        candidato.setNome(listaC[i].getNome());
+        candidato.setSesso(listaC[i].getSesso());
     }
 
+    //Data una certa posizione rimuove il contenuto di questo nella lista
     public void rimuoviC(int posC){
         listaC[posC] = null;
     }
 
-    public void modifica(){
+    //Da fare
+    public void modificaC(){
 
-    }
-
-    public String toString() {
-        return "ListaCandidati{" +
-                "listaC=" + Arrays.toString(listaC) +
-                '}';
     }
 }

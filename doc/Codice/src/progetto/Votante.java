@@ -37,13 +37,6 @@ public class Votante {
         return pin;
     }
 
-    public void generaPin() {
-        SecureRandom random = new SecureRandom();
-        int num = random.nextInt(10000);
-        String formatted = String.format("%05d", num);
-        pin = formatted;
-    }
-
     public String getNumTelefono() {
         return NumTelefono;
     }
@@ -68,5 +61,13 @@ public class Votante {
                 ", password='" + password + '\'' +
                 ", username='" + username + '\'' +
                 '}';
+    }
+
+    //Genera il Pin che viene assegnato al votante
+    public void generaPin() {
+        SecureRandom random = new SecureRandom();
+        int num = random.nextInt(10000);
+        String formatted = String.format("%05d", num);
+        pin = formatted;
     }
 }
