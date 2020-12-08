@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"progetto","l":"Candidato"},{"p":"progetto","l":"Conteggio"},{"p":"progetto","l":"ListaVotanti"},{"p":"progetto","l":"Main"},{"p":"progetto","l":"Salvataggio"},{"p":"progetto","l":"Votante"},{"p":"progetto","l":"Voto"}];updateSearchResults();
