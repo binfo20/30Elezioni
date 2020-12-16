@@ -1,8 +1,8 @@
-# TemplateProgetto
+# Progetto Elezioni (modificato)
 
-* Cambiare il nome del progetto. 
-* Copiare la descrizione del progetto
+Obiettivi per il 23/12
+* (Eventualmente) Controllare, riprogettare, modificando UML 
+* Ottenere una demo funzionante in modalità testuale
+* Iniziare una demo "abbastanza" funzionante in modalità JavaFX. La parte non grafica (quindi tutte le classi tranne eventualmente in main) deve essere la stessa
+* Per valutare il contributo faranno fede soprattutto i commit (se lavorate assieme, firmate il commit assieme --> https://github.blog/2018-01-29-commit-together-with-co-authors/)
 
-* Inserire i nomi dei componenti del gruppo e il loro ruolo prinicple
-
-* Indipendentemente dalla struttura che volte darvi, e dall'IDE che userete, dovrete avere una cartella "doc" in cui metterete tutta la documentezione di progetto (UML, commenti, schemi e altro che vi si potrà chiedere)
