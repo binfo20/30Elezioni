@@ -171,6 +171,8 @@ public class Main {
         Conteggio conteggio = new Conteggio();
         Voto voto = new Voto();
         int menu;
+       
+        
         boolean continua=true;
         while(continua) {
             System.out.println("Cosa vuoi fare: uscire(0), inserimento votanti(1), inserimento candidati(2), inserimento voti(3), inserimento data e ora(4)");
@@ -181,6 +183,8 @@ public class Main {
                 case (2) -> inserimentoC(listaCandidati, candidato);
                 case (3) -> inserimentoVoto(voto, listaVotanti, listaCandidati, candidato, conteggio);
                 case (4) -> inserimentoDataOra(voto);
+                case (5) -> System.out.println(listaVotanti.getListaV());
+
             }
         }
     }
