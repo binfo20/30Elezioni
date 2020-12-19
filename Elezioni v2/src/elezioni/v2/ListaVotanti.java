@@ -11,7 +11,7 @@ import java.util.*;
  * @author Aimen
  */
 public class ListaVotanti implements Serializable{
-    protected ArrayList<Votante> listaVotanti;
+    public ArrayList<Votante> listaVotanti;
 
     public ListaVotanti() {
         super();

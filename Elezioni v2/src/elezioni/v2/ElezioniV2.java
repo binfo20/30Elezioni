@@ -1,5 +1,6 @@
 
 package elezioni.v2;
+import java.io.IOException;
 import java.util.*;
 import java.util.Scanner;
 
@@ -11,12 +12,13 @@ import java.util.Scanner;
 public class ElezioniV2 {
     
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
         
         Scanner in = new Scanner(System.in);
         int nvotanti;
         ArrayList<Votante> listaVotanti = new ArrayList<Votante>();
+        ArrayList<Candidato>listaCandidati= new ArrayList<Candidato>();
         System.out.println("Inserisci il numero di votanti");
         nvotanti = in.nextInt();
         for(int i=0;i<nvotanti;i++){
@@ -28,15 +30,16 @@ public class ElezioniV2 {
         listaVotanti.add(new Votante(eta,email,pin));
         
         }
-        for(int i=0;i<listaVotanti.size();i++){
-            System.out.println(listaVotanti.get(i)+"\n");
-        }
         
-        //PICCOLA PROVA SALVATAGGIO
-        Salvataggio s = new Salvataggio();
-        for(int i=0;i<nvotanti;i++)
-            s.SalvaVotante(listaVotanti.get(i));
-        //FINE PROVA SALVATAGGIO
+        Salvataggio.stampaSuFile(listaCandidati, listaVotanti);
+        
+        
+        
+        //Salvataggio s = new Salvataggio();
+        //for(int i=0;i<nvotanti;i++)
+          //  s.SalvaVotante(listaVotanti.get(i));
+        
+        
         
     }
     
