@@ -18,7 +18,7 @@ public class Salvataggio implements Serializable {
          ObjectOutputStream output = null;
         
         try{
-            output = new ObjectOutputStream(new FileOutputStream("Giocatore "+v.email+".dat"));
+            output = new ObjectOutputStream(new FileOutputStream("Votante "+v.email+".dat"));
         }
         
         catch(FileNotFoundException e){
