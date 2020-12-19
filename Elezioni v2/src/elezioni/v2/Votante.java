@@ -4,13 +4,14 @@
  * and open the template in the editor.
  */
 package elezioni.v2;
+import java.io.Serializable;
 import java.util.*;
 
 /**
  *
  * @author Aimen
  */
-public class Votante {
+public class Votante implements Serializable {
     //Il votante è segreto
     protected  int eta;
     protected  String email;
