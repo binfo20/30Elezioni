@@ -13,7 +13,7 @@ import java.util.*;
  */
 public class Salvataggio implements Serializable {
     
-     public String Salva(Votante v){
+     public String SalvaVotante(Votante v){
         
          ObjectOutputStream output = null;
         
