@@ -11,4 +11,29 @@ import java.util.*;
  */
 public class ListaCandidati {
      protected ArrayList<Candidato> listaCandidato;
+
+    public ListaCandidati(ArrayList<Candidato> listaCandidato) {
+        super();
+        this.listaCandidato = listaCandidato;
+    }
+
+    public ArrayList<Candidato> getListaCandidato() {
+        return listaCandidato;
+    }
+
+    public void setListaCandidato(ArrayList<Candidato> listaCandidato) {
+        this.listaCandidato = listaCandidato;
+    }
+    
+      public void aggiungiCandidato(Candidato p){
+       listaCandidato.add(p);
+    }
+
+    @Override
+    public String toString() {
+        return "ListaCandidati{" + "listaCandidato=" + listaCandidato + '}';
+    }
+
+     
+     
 }
