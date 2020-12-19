@@ -9,6 +9,7 @@ import java.util.*;
  *
  * @author Tommy
  */
+//candidati
 public class ListaCandidati {
      protected ArrayList<Candidato> listaCandidato;
 
@@ -35,5 +36,6 @@ public class ListaCandidati {
     }
 
      
+    
      
 }
