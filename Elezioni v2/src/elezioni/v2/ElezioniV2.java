@@ -32,7 +32,7 @@ public class ElezioniV2 {
         //PICCOLA PROVA SALVATAGGIO
         Salvataggio s = new Salvataggio();
         for(int i=0;i<nvotanti;i++)
-            s.Salva(listaVotanti.get(i));
+            s.SalvaVotante(listaVotanti.get(i));
         //FINE PROVA SALVATAGGIO
         
     }
