@@ -9,7 +9,7 @@ import java.util.*;
  *
  * @author Tommy
  */
-//candidati
+//lista di tutti i candidati
 public class ListaCandidati {
      protected ArrayList<Candidato> listaCandidato;
 
