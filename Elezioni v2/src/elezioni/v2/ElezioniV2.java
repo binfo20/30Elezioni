@@ -3,7 +3,10 @@ package elezioni.v2;
 import java.util.*;
 import java.util.Scanner;
 
-
+/**
+ *
+ * @author Aimen
+ */
 
 public class ElezioniV2 {
     
