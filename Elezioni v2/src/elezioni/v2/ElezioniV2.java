@@ -29,7 +29,11 @@ public class ElezioniV2 {
             System.out.println(listaVotanti.get(i)+"\n");
         }
         
-        
+        //PICCOLA PROVA SALVATAGGIO
+        Salvataggio s = new Salvataggio();
+        for(int i=0;i<nvotanti;i++)
+            s.Salva(listaVotanti.get(i));
+        //FINE PROVA SALVATAGGIO
         
     }
     

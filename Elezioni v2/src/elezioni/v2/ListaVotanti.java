@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 package elezioni.v2;
+import java.io.Serializable;
 import java.util.*;
 /**
  *
  * @author Aimen
  */
-public class ListaVotanti {
+public class ListaVotanti implements Serializable{
     protected ArrayList<Votante> listaVotanti;
 
     public ListaVotanti() {
