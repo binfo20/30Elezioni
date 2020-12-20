@@ -1,2 +1,2 @@
 ELENCO VOTANTI
-votante numero 1Votante{eta=23, email=italia, pin=232}
+votante numero 1Votante{eta=1, email=f, pin=4}

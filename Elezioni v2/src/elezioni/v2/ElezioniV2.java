@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class ElezioniV2 {
     
-
+    
     public static void main(String[] args) throws IOException {
         
         
@@ -19,6 +19,8 @@ public class ElezioniV2 {
         int nvotanti;
         ArrayList<Votante> listaVotanti = new ArrayList<Votante>();
         ArrayList<Candidato>listaCandidati= new ArrayList<Candidato>();
+       void Inserimento_Votanti(listaVotanti){
+        
         System.out.println("Inserisci il numero di votanti");
         nvotanti = in.nextInt();
         for(int i=0;i<nvotanti;i++){
@@ -28,8 +30,11 @@ public class ElezioniV2 {
         int pin = in.nextInt();
         
         listaVotanti.add(new Votante(eta,email,pin));
+        }
         
         }
+        
+        
         
         Salvataggio.stampaSuFile(listaCandidati, listaVotanti);
         
