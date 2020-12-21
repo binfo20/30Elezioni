@@ -28,7 +28,7 @@
             <TextField cache="true" floatText="Email" layoutX="14.0" layoutY="99.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="162.0" />
             <TextField cache="true" floatText="Età" layoutX="13.0" layoutY="135.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="162.0" />
             <TextField cache="true" floatText="Username" layoutX="13.0" layoutY="171.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="162.0" />
-            <Button layoutX="10.0" layoutY="303.0" mnemonicParsing="false" style="-fx-background-color: black;" text="VOTA" />
+            <Button layoutX="10.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: black;" text="VOTA" />
             <Button layoutX="10.0" layoutY="344.0" mnemonicParsing="false" style="-fx-background-color: black;" text="CANCELLA INFORMAZIONI" />
             <TextField cache="true" floatText="Password" layoutX="13.0" layoutY="207.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="162.0" />
             <ImageView fitHeight="124.0" fitWidth="218.0" layoutX="202.0" layoutY="127.0">
