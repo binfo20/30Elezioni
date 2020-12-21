@@ -10,9 +10,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="748.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="elezionifx2.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="748.0" style="-fx-background-color: lightgray; -fx-border-color: red;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="elezionifx2.FXMLDocumentController">
     <children>
-      <Line endX="378.29998779296875" endY="644.300048828125" layoutY="12.0" startX="378.29998779296875" startY="-11.99999713897705" />
+      <Line endX="379.29998779296875" endY="647.69287109375" layoutY="12.0" startX="379.29998779296875" startY="-12.0" />
       <TextField alignment="CENTER" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="23.0" prefWidth="346.0" text="Sei un votante? Vota Qui Sotto">
          <font>
             <Font name="Courier New Bold" size="12.0" />
