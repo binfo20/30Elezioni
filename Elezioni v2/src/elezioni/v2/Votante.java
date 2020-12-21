@@ -16,6 +16,7 @@ public class Votante implements Serializable {
     protected  int eta;
     protected  String email;
     protected int pin;
+    
 
     public Votante(int eta, String email, int pin) {
         this.eta = eta;
