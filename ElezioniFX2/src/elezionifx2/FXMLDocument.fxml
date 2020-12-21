@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.ToggleButtonGroup?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -36,10 +37,10 @@
       <TextField layoutX="67.0" layoutY="306.0" prefHeight="26.0" prefWidth="243.0" />
       <TextField layoutX="67.0" layoutY="361.0" />
       <TextField layoutX="161.0" layoutY="410.0" prefHeight="26.0" prefWidth="173.0" />
-      <TextField layoutX="575.0" layoutY="257.0" />
-      <TextField layoutX="575.0" layoutY="307.0" />
-      <TextField layoutX="575.0" layoutY="361.0" />
-      <TextField layoutX="575.0" layoutY="410.0" />
+      <TextField layoutX="493.0" layoutY="256.0" />
+      <TextField layoutX="493.0" layoutY="306.0" />
+      <TextField layoutX="493.0" layoutY="360.0" />
+      <TextField layoutX="493.0" layoutY="409.0" />
       <Text layoutX="33.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ETA">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -48,11 +49,11 @@
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Text>
-      <Text layoutX="498.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME">
+      <Text layoutX="416.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Text>
-      <Text layoutX="486.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COGNOME">
+      <Text layoutX="404.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COGNOME">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Text>
@@ -61,20 +62,37 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text layoutX="29.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOTO A FAVORE DI">
+      <Text layoutX="29.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOTO - NOME">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Button layoutX="136.0" layoutY="464.0" mnemonicParsing="false" text="VOTA">
+      <Button layoutX="134.0" layoutY="534.0" mnemonicParsing="false" text="VOTA">
          <font>
             <Font name="Courier New Bold" size="28.0" />
          </font>
       </Button>
-      <Button layoutX="507.0" layoutY="464.0" mnemonicParsing="false" text="VOTA">
+      <Button layoutX="465.0" layoutY="534.0" mnemonicParsing="false" text="CANDITATI">
          <font>
             <Font name="Courier New Bold" size="28.0" />
          </font>
       </Button>
+      <Text layoutX="424.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ETA">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="409.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PARTITO">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="29.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOTO - PARTITO">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <TextField layoutX="161.0" layoutY="459.0" prefHeight="26.0" prefWidth="173.0" />
+      <ToggleButtonGroup layoutX="27.0" layoutY="493.0" selectionType="SINGLE" />
     </children>
 </AnchorPane>
