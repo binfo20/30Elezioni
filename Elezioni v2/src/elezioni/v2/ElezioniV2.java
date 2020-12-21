@@ -12,16 +12,6 @@ import java.util.Scanner;
 public class ElezioniV2 {
     
     
-    
-    
-        
-        
-    
-    
-    
-        
-    
-    
     public static void main(String[] args) throws IOException {
         
         
@@ -37,8 +27,24 @@ public class ElezioniV2 {
         String email = in.next();
         int pin = in.nextInt();
         listaVotanti.add(new Votante(eta,email,pin));
+        }
         //FINE AGGIUNTA VOTANTI ALL'ARRAY LIST
         
+        //INIZIO AGGIUNTA CANDIDATI ALL'ARRAYLIST
+           System.out.println("Inserisci il numero di candidati alle elezioni");
+            int nCandidati = in.nextInt();
+          for(int j=0;j<nCandidati;j++){
+                System.out.println("Inserisci candidato\n Nome:");
+                 String nome = in.next();
+                  System.out.println("Cognome:");
+                 String cognome = in.next();
+                  System.out.println("Età:");
+                   int età = in.nextInt();
+                   System.out.println("Partito:");
+                 String Partito = in.next();
+                    listaCandidati.add(new Candidato(nome,cognome,età,Partito));
+          }
+        //FINE AGGIUNTA CANDIDATI ALL'ARRAYLIST
         
         
         
@@ -60,4 +66,4 @@ public class ElezioniV2 {
     
     
 }
-}
+

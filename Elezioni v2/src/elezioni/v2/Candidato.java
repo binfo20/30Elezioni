@@ -13,9 +13,9 @@ public class Candidato {
     protected String nome;
     protected String cognome;
     protected  int eta;
-   protected int partito; 
+   protected String partito; 
 
-    public Candidato(String nome, String cognome, int eta, int partito) {
+    public Candidato(String nome, String cognome, int eta, String partito) {
         this.nome = nome;
         this.cognome = cognome;
         this.eta = eta;
@@ -46,11 +46,11 @@ public class Candidato {
         this.eta = eta;
     }
 
-    public int getPartito() {
+    public String getPartito() {
         return partito;
     }
 
-    public void setPartito(int partito) {
+    public void setPartito(String partito) {
         this.partito = partito;
     }
 
