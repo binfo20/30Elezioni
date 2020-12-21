@@ -14,7 +14,7 @@ import javafx.scene.control.Button;
 
 /**
  *
- * @author famig
+ * @author mors
  */
 public class VotanteDocumentController implements Initializable {
     @FXML

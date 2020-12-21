@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author famig
+ * @author mors
  */
 public class ELEZIONIJAVAFX extends Application {
     
