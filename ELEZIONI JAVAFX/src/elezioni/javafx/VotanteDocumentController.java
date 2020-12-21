@@ -20,6 +20,7 @@ public class VotanteDocumentController implements Initializable {
     @FXML
     private Button button;
     
+    @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
        

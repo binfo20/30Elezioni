@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="elezioni.javafx.CandidatoDocumentController">
+<Scene xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="elezioni.javafx.VotanteDocumentController">
    <root>
       <AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="434.0">
           <children>
