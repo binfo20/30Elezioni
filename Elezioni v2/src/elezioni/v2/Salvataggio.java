@@ -52,5 +52,10 @@ public class Salvataggio implements Serializable {
 		fwrite.close();
 	}
 
+    /*public static void esci(){
+        
+    }
+    */
+    
 
 }

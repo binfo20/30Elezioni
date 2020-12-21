@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package elezioni.v2;
-import java.io.Serializable;
 import java.util.*;
 
 /**

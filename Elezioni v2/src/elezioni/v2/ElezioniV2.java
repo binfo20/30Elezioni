@@ -55,7 +55,13 @@ public class ElezioniV2 {
                    int età = in.nextInt();
                    System.out.println("Partito:");
                  String Partito = in.next();
-                    listaCandidati.add(new Candidato(nome,cognome,età,Partito));
+                  System.out.println("Sesso: scrivi M/F");
+                  String check_sesso = in.next();
+                  boolean isMale;
+                  if("M".equals(check_sesso)||"m".equals(check_sesso))
+                    isMale = true;
+                  else isMale = false;
+                    listaCandidati.add(new Candidato(nome,cognome,età,isMale,Partito));
           }
         //FINE AGGIUNTA CANDIDATI ALL'ARRAYLIST
         

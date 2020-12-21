@@ -13,13 +13,23 @@ public class Candidato {
     protected String nome;
     protected String cognome;
     protected  int eta;
-   protected String partito; 
+    protected String partito;
+    protected boolean isMale; 
 
-    public Candidato(String nome, String cognome, int eta, String partito) {
+    public Candidato(String nome, String cognome, int eta, boolean isMale, String partito) {
         this.nome = nome;
         this.cognome = cognome;
         this.eta = eta;
+        this.isMale = isMale;
         this.partito = partito;
+    }
+
+    public boolean isIsMale() {
+        return isMale;
+    }
+
+    public void setIsMale(boolean isMale) {
+        this.isMale = isMale;
     }
 
     public String getNome() {
@@ -56,8 +66,10 @@ public class Candidato {
 
     @Override
     public String toString() {
-        return "Candidato{" + "nome=" + nome + ", cognome=" + cognome + ", eta=" + eta + ", partito=" + partito + '}';
+        return "Candidato{" + "nome=" + nome + ", cognome=" + cognome + ", eta=" + eta + ", partito=" + partito + ", isMale=" + isMale + '}';
     }
+
+    
     
    
 }
