@@ -16,65 +16,58 @@
 --
 + candidato(nome,congnome,ismale,eta,partito)
 + tostring();
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>451</x><y>459</y><w>210</w><h>220</h></coordinates><panel_attributes>Voto
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>451</x><y>459</y><w>210</w><h>110</h></coordinates><panel_attributes>Voto
 --
-- data: string
-- orarioAttuale: string
-- orarioInizio: string
-- orarioFine: string
-- isScritto: bool
+//- data: string
+//- orarioAttuale: string
+//- orarioInizio: string
+//- orarioFine: string
+//- isScritto: bool
 - Voto: string
-- VotiTot: int
-- id: int
-- contavoti[]: int
+//- VotiTot: int
+//- id: int
+//- contavoti[]: int
 --
-+ controlloDataOra()
-+ controlloPin()
-+ controlloVoto()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>551</x><y>379</y><w>70</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>791</x><y>649</y><w>210</w><h>170</h></coordinates><panel_attributes>Conteggio
+//+ controlloDataOra()
+//+ controlloPin()
+//+ controlloVoto()
++ tostring():
++ voto(voto);</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>551</x><y>379</y><w>70</w><h>100</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>791</x><y>649</y><w>210</w><h>170</h></coordinates><panel_attributes>ListaVoti
 --
-- VotiTot: int
-- ClassificaNomi[]: string
-- ClassificaVoti[]: int
-- Percentuale: float
-- SBianche: int
+- ArrayList &lt;Voto&gt; listaVoti
 --
-+ controlloDoppioVoto()
-+ ConteggioVoti()
-+ ClassificaTot()
-+ CalcolaPercentuale()
++ aggiungiVoti(ArrayList &lt;Voto&gt; listaVoti)
++ toString
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>291</x><y>409</y><w>180</w><h>160</h></coordinates><panel_attributes>lt=&lt;.
 &lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;10;10;140;160;140</additional_attributes></element><element><id>Relation</id><coordinates><x>251</x><y>199</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>403</x><y>149</y><w>100</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>451</x><y>279</y><w>210</w><h>110</h></coordinates><panel_attributes>ListaVotanti
 --
 + listaVotanti ArrayList&lt;Votante&gt;
 --
-+ rimuoviV(posV)
-+ modificaV(pos V)
-+ inserisciV(i, votante)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>551</x><y>209</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>451</x><y>729</y><w>210</w><h>80</h></coordinates><panel_attributes>Elezioni V2
+//+ rimuoviV(posV)
+//+ modificaV(pos V)
++ aggiungiVotante(i, votante)
++ tostring();</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>551</x><y>209</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>451</x><y>729</y><w>210</w><h>80</h></coordinates><panel_attributes>Elezioni V2
 --
 Responsabilities: si occupa dell'input e
 dell'output.
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>551</x><y>669</y><w>70</w><h>80</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>651</x><y>769</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>551</x><y>559</y><w>70</w><h>190</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>651</x><y>769</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
 &lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>479</y><w>290</w><h>190</h></coordinates><panel_attributes>lt=&lt;.
 &lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;20;270;20;270;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>729</y><w>340</w><h>90</h></coordinates><panel_attributes>Salvataggio
 --
 + salvaVotante (Votante v);
 + StampaListaSuFile (ArrayList &lt;Candidato&gt; listacandidato);
-+ Esci();</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>749</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
++ Esci(); //commentata</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>749</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
 &lt;&lt;uses&gt;&gt;</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>481</x><y>69</y><w>320</w><h>150</h></coordinates><panel_attributes>Votante
 --
 - Email: string
 - NumTelefono: string
 - pin: string
-- password: string
-- username: string
 --
 + generaPin()
 + tostring():
-+ votante(eta,email,pin,numTelefono,Username,Password)
++ votante(eta,email,pin)
 
 
 
