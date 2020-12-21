@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="748.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="elezionifx2.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="748.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="elezionifx2.FXMLDocumentController">
     <children>
-      <Line endX="373.9999694824219" endY="643.2000122070312" layoutY="12.0" startX="373.9999694824219" startY="3.051757857974735E-6" />
+      <Line endX="373.9999694824219" endY="643.2000122070312" layoutY="12.0" startX="373.9999694824219" startY="-12.000001907348633" />
       <TextField alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="23.0" prefWidth="346.0" text="Sei un votante? Vota Qui">
          <font>
             <Font name="Courier New Bold" size="12.0" />
@@ -21,7 +21,7 @@
             <Font name="Courier New Bold" size="12.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="110.0" fitWidth="207.0" layoutX="84.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="163.0" fitWidth="207.0" layoutX="84.0" layoutY="56.0" pickOnBounds="true">
          <image>
             <Image url="@voto.png" />
          </image>
@@ -31,17 +31,29 @@
             <Image url="@candidato.png" />
          </image>
       </ImageView>
-      <TextField layoutX="188.0" layoutY="343.0" />
-      <TextField layoutX="188.0" layoutY="393.0" />
-      <TextField layoutX="188.0" layoutY="447.0" />
-      <TextField layoutX="188.0" layoutY="496.0" />
-      <TextField layoutX="568.0" layoutY="343.0" />
-      <TextField layoutX="568.0" layoutY="393.0" />
-      <TextField layoutX="568.0" layoutY="447.0" />
-      <TextField layoutX="568.0" layoutY="496.0" />
-      <Text layoutX="121.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME" />
-      <Text layoutX="109.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COGNOME" />
-      <Text layoutX="491.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME" />
-      <Text layoutX="479.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COGNOME" />
+      <TextField layoutX="195.0" layoutY="257.0" />
+      <TextField layoutX="195.0" layoutY="307.0" />
+      <TextField layoutX="195.0" layoutY="361.0" />
+      <TextField layoutX="195.0" layoutY="410.0" />
+      <TextField layoutX="575.0" layoutY="257.0" />
+      <TextField layoutX="575.0" layoutY="307.0" />
+      <TextField layoutX="575.0" layoutY="361.0" />
+      <TextField layoutX="575.0" layoutY="410.0" />
+      <Text layoutX="128.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text layoutX="116.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COGNOME">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text layoutX="498.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text layoutX="486.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COGNOME">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
     </children>
 </AnchorPane>
