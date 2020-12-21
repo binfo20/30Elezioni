@@ -17,7 +17,7 @@ import javafx.scene.control.Label;
  *
  * @author famig
  */
-public class CandidatoDocumentController implements Initializable {
+public class VotanteDocumentController implements Initializable {
     
     private Label label;
     
