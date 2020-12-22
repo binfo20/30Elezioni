@@ -11,7 +11,7 @@ import java.util.*;
  */
 //lista di tutti i candidati
 public class ListaCandidati {
-     protected ArrayList<Candidato> listaCandidato;
+        public ArrayList<Candidato> listaCandidato;
 
     public ListaCandidati(ArrayList<Candidato> listaCandidato) {
         super();

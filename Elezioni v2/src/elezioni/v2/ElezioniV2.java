@@ -72,7 +72,7 @@ public class ElezioniV2 {
             System.out.println(listaCandidati.get(k));
         }
             for(int l=0;l<listaVotanti.size();l++){
-                System.out.println("\n\n\n\n\n\n"+listaVotanti.get(l)+" è il suo turno\nDeve indicare il nome del partita scrivendolo correttamente");
+                System.out.println("\n\n\n\n\n\n"+listaVotanti.get(l)+" è il suo turno\nDeve indicare il nome del partito scrivendolo correttamente");
                 String voto = in.next();
                 listaVoti.add(new Voto(voto));
             }

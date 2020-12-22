@@ -42,12 +42,17 @@ public class Salvataggio implements Serializable {
         
         return "Salvo "+ v.toString() ;
     }
-    public static void stampaSuFile(ArrayList<Candidato>listaCanditato , ArrayList<Votante>ListaVotanti) throws IOException {
+    public static void stampaSuFile(ArrayList<Candidato>ListaCanditati , ArrayList<Votante>ListaVotanti) throws IOException {
 		FileWriter fwrite = new FileWriter("Liste.txt");
                 fwrite.write("ELENCO VOTANTI\n");
 		for(int i=0;i< ListaVotanti.size();i++){
                     fwrite.write("votante numero "+ (i+1) +ListaVotanti.get(i));
                 }
+                fwrite.write("ELENCO CANDIDATI\n");
+                for(int h=0;h<ListaCanditati.size(); h++){
+                    fwrite.write("votante numero "+ (h+1)+ ListaCanditati.get(h));
+                }
+                       
 		
 		fwrite.close();
 	}
