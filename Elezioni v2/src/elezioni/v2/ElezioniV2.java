@@ -38,19 +38,9 @@ public class ElezioniV2 {
     }
     
     
-    public static void main(String[] args) throws IOException {
-        
-        
-        Scanner in = new Scanner(System.in);
-        ArrayList <Votante> listaVotanti = new ArrayList<Votante>();
-        ArrayList<Candidato>listaCandidati= new ArrayList<Candidato>();
-        ArrayList<Voto>listaVoti= new ArrayList<Voto>();
-        //INIZIO AGGIUNTA VOTANTI ALL'ARRAYLIST
-        InserimentoVotanti(listaVotanti);
-        //FINE AGGIUNTA VOTANTI ALL'ARRAY LIST
-        
-        //INIZIO AGGIUNTA CANDIDATI ALL'ARRAYLIST
-           System.out.println("Inserisci il numero di candidati alle elezioni");
+       public static void InserimentoCandidati(ArrayList<Candidato>listaCandidati){
+            Scanner in = new Scanner(System.in);
+         System.out.println("Inserisci il numero di candidati alle elezioni");
             int nCandidati = in.nextInt();
           for(int j=0;j<nCandidati;j++){
                 System.out.println("Inserisci candidato\nNome:");
@@ -69,6 +59,21 @@ public class ElezioniV2 {
                   else isMale = false;
                     listaCandidati.add(new Candidato(nome,cognome,età,isMale,Partito));
           }
+      
+    }
+    
+    public static void main(String[] args) throws IOException {        
+       Scanner in = new Scanner(System.in);
+      
+        ArrayList <Votante> listaVotanti = new ArrayList<Votante>();
+        ArrayList<Candidato>listaCandidati= new ArrayList<Candidato>();
+        ArrayList<Voto>listaVoti= new ArrayList<Voto>();
+        //INIZIO AGGIUNTA VOTANTI ALL'ARRAYLIST
+        InserimentoVotanti(listaVotanti);
+        //FINE AGGIUNTA VOTANTI ALL'ARRAY LIST
+       
+        //INIZIO AGGIUNTA CANDIDATI ALL'ARRAYLIST
+          InserimentoCandidati(listaCandidati);
         //FINE AGGIUNTA CANDIDATI ALL'ARRAYLIST
         
         //INIZIO INSERIMENTI VOTO
@@ -87,25 +92,13 @@ public class ElezioniV2 {
         //MI MOSTRA I RISULTATI FINALI A SCHERMO
         RisultatiFinali(listaVoti);
         
-        
-        
-        
-        
-        
         //INIZIO SCRITTURA SU FILE TXT DEI CANDITATI E VOTANTI
         Salvataggio.stampaSuFile(listaCandidati, listaVotanti);
         //FINE SCRITTURA SU FILE TXT DEI CANDITATI E VOTANTI
         
-        
         //Salvataggio s = new Salvataggio();
         //for(int i=0;i<nvotanti;i++)
-          //  s.SalvaVotante(listaVotanti.get(i));
-        
-        
-        
-    }
-
-    
-    
+        //  s.SalvaVotante(listaVotanti.get(i));
+         }
 }
 
