@@ -23,6 +23,8 @@ public class ElezioniV2 {
     } 
     
     public static void InserimentoVotanti(ArrayList<Votante>listaVotanti){
+        
+           System.out.println("Inserisci il numero dei votanti:");
         Scanner in = new Scanner(System.in);
         int nvotanti = in.nextInt();
         for(int i=0;i<nvotanti;i++){
