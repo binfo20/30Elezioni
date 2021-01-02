@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane prefHeight="329.0" prefWidth="370.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="100.0" tabMaxWidth="100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="elezioni_javafx.MenuController">
+  <tabs>
+    <Tab text="MENU">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="455.0" />
+      </content>
+    </Tab>
+    <Tab text="VOTANTE">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField layoutX="29.0" layoutY="42.0" promptText="MAIL" />
+                  <TextField accessibleRole="PASSWORD_FIELD" layoutX="29.0" layoutY="74.0" promptText="PIN" />
+                  <TextField layoutX="29.0" layoutY="107.0" promptText="ETA" />
+                  <TextField layoutX="29.0" layoutY="137.0" promptText="PARTITO VOTANTE" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="CANDIDATO">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
