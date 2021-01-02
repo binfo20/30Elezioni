@@ -17,12 +17,12 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="349.0" prefWidth="392.0">
                <children>
-                  <Text layoutX="14.0" layoutY="29.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCESSO CONSENTITO SOLO A PERSONE AUTORIZZATE" textAlignment="CENTER" wrappingWidth="406.0">
+                  <Text layoutY="29.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCESSO CONSENTITO SOLO A PERSONE AUTORIZZATE" textAlignment="CENTER" wrappingWidth="406.0">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <Button alignment="CENTER" layoutX="139.0" layoutY="68.0" mnemonicParsing="false" text="SONO AUTORIZZATO">
+                  <Button alignment="CENTER" layoutX="125.0" layoutY="70.0" mnemonicParsing="false" text="SONO AUTORIZZATO">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
