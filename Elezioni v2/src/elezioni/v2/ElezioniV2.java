@@ -16,12 +16,26 @@ public class ElezioniV2 {
     public static void RisultatiFinali(ArrayList<Voto> listaVoti) 
     { 
   
-        // hash set is created and elements of 
-        // arraylist are insertd into it 
+        
         Set<Voto> st = new HashSet<Voto>(listaVoti); 
         for (Voto s : st) 
             System.out.println(s + ": " + Collections.frequency(listaVoti, s)); 
     } 
+    
+    public static void InserimentoVotanti(ArrayList<Votante>listaVotanti){
+        
+           System.out.println("Inserisci il numero dei votanti:");
+        Scanner in = new Scanner(System.in);
+        int nvotanti = in.nextInt();
+        for(int i=0;i<nvotanti;i++){
+            System.out.println("Inserisci votante\netà , email e pin");
+        int eta = in.nextInt();
+        String email = in.next();
+        int pin = in.nextInt();
+        listaVotanti.add(new Votante(eta,email,pin));
+        }
+        
+    }
     
     
     public static void main(String[] args) throws IOException {
@@ -32,15 +46,7 @@ public class ElezioniV2 {
         ArrayList<Candidato>listaCandidati= new ArrayList<Candidato>();
         ArrayList<Voto>listaVoti= new ArrayList<Voto>();
         //INIZIO AGGIUNTA VOTANTI ALL'ARRAYLIST
-        System.out.println("Inserisci il numero di votanti");
-        int nvotanti = in.nextInt();
-        for(int i=0;i<nvotanti;i++){
-            System.out.println("Inserisci votante\netà , email e pin");
-        int eta = in.nextInt();
-        String email = in.next();
-        int pin = in.nextInt();
-        listaVotanti.add(new Votante(eta,email,pin));
-        }
+        InserimentoVotanti(listaVotanti);
         //FINE AGGIUNTA VOTANTI ALL'ARRAY LIST
         
         //INIZIO AGGIUNTA CANDIDATI ALL'ARRAYLIST
