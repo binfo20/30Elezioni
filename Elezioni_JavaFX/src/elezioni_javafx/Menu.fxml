@@ -22,27 +22,27 @@
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <Button alignment="CENTER" layoutX="125.0" layoutY="70.0" mnemonicParsing="false" text="SONO AUTORIZZATO">
+                  <Button id="autorizzazione" fx:id="autorizzazione" alignment="CENTER" layoutX="125.0" layoutY="70.0" mnemonicParsing="false" text="SONO AUTORIZZATO">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" layoutX="106.0" layoutY="215.0" mnemonicParsing="false" text="STAMPA LISTA CANDIDATI">
+                  <Button fx:id="stampa_lista_candidati" alignment="CENTER" disable="true" layoutX="106.0" layoutY="215.0" mnemonicParsing="false" text="STAMPA LISTA CANDIDATI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" layoutX="113.0" layoutY="174.0" mnemonicParsing="false" text="STAMPA LISTA VOTANTI">
+                  <Button fx:id="stampa_lista_votanti" alignment="CENTER" disable="true" layoutX="113.0" layoutY="174.0" mnemonicParsing="false" text="STAMPA LISTA VOTANTI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" layoutX="149.0" layoutY="131.0" mnemonicParsing="false" text="STAMPA VOTI">
+                  <Button fx:id="stampa_voti" alignment="CENTER" disable="true" layoutX="149.0" layoutY="131.0" mnemonicParsing="false" text="STAMPA VOTI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" layoutX="134.0" layoutY="348.0" mnemonicParsing="false" text="CANCELLA TUTTO">
+                  <Button fx:id="cancella_tutto" alignment="CENTER" disable="true" layoutX="134.0" layoutY="348.0" mnemonicParsing="false" text="CANCELLA TUTTO">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
@@ -73,7 +73,7 @@
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <Button layoutX="295.0" layoutY="227.0" mnemonicParsing="false" text="VOTA">
+                  <Button fx:id="vota" layoutX="286.0" layoutY="227.0" mnemonicParsing="false" text="VOTA">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
@@ -91,7 +91,7 @@
                         <Image url="@48744.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="267.0" layoutY="243.0" mnemonicParsing="false" text="CANDIDATI">
+                  <Button fx:id="candidati" layoutX="267.0" layoutY="243.0" mnemonicParsing="false" text="CANDIDATI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
