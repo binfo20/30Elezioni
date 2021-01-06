@@ -22,7 +22,7 @@
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <Button id="autorizzazione" fx:id="autorizzazione" alignment="CENTER" layoutX="125.0" layoutY="70.0" mnemonicParsing="false" text="SONO AUTORIZZATO">
+                  <Button id="autorizzazione" fx:id="autorizzazione" alignment="CENTER" layoutX="125.0" layoutY="70.0" mnemonicParsing="false" onAction="#attiva" onMouseClicked="#attiva" onMousePressed="#attiva" text="SONO AUTORIZZATO">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
