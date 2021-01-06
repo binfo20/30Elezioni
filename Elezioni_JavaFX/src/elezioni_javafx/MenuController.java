@@ -48,8 +48,8 @@ public class MenuController implements Initializable {
     
     @FXML
     private void scelta_sesso(MouseEvent event){
-       if(sesso_maschio.isPressed())sesso_femmina.fire();
-       if(sesso_femmina.isPressed())sesso_maschio.fire();
+       if(sesso_maschio.isPressed())sesso_femmina.setSelected(false);
+       if(sesso_femmina.isPressed())sesso_maschio.setSelected(false);
     }
     
     
