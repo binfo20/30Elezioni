@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -32,7 +33,10 @@ public class MenuController implements Initializable {
     private Button vota;
     @FXML
     private Button candidati;
-    
+    @FXML
+    private RadioButton sesso_maschio;
+    @FXML
+    private RadioButton sesso_femmina;
     
     @FXML
     private void attiva(MouseEvent event){
@@ -40,6 +44,12 @@ public class MenuController implements Initializable {
         stampa_lista_candidati.setDisable(false);
         cancella_tutto.setDisable(false);
         stampa_voti.setDisable(false);
+    }
+    
+    @FXML
+    private void scelta_sesso(MouseEvent event){
+       if(sesso_maschio.isPressed())sesso_femmina.fire();
+       if(sesso_femmina.isPressed())sesso_maschio.fire();
     }
     
     

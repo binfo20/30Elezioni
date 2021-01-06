@@ -109,8 +109,8 @@
                   <TextField layoutX="24.0" layoutY="127.0" promptText="COGNOME" />
                   <TextField layoutX="24.0" layoutY="187.0" promptText="ETA" />
                   <TextField layoutX="24.0" layoutY="243.0" promptText="PARTITO" />
-                  <RadioButton layoutX="24.0" layoutY="295.0" mnemonicParsing="false" text="M" />
-                  <RadioButton layoutX="24.0" layoutY="323.0" mnemonicParsing="false" text="F" />
+                  <RadioButton fx:id="sesso_maschio" layoutX="24.0" layoutY="295.0" mnemonicParsing="false" onAction="#scelta_sesso" onMouseClicked="#scelta_sesso" onMousePressed="#scelta_sesso" text="M" />
+                  <RadioButton fx:id="sesso_femmina" layoutX="24.0" layoutY="323.0" mnemonicParsing="false" onAction="#scelta_sesso" onMouseClicked="#scelta_sesso" onMousePressed="#scelta_sesso" text="F" />
                </children></AnchorPane>
       </content>
     </Tab>
