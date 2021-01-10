@@ -26,7 +26,7 @@ public class CandidatoFX {
 
     @Override
     public String toString() {
-        return "CandidatoFX{" + "nome=" + nome + ", cognome=" + cognome + ", eta=" + eta + ", partito=" + partito + ", Sesso=" + Sesso + '}';
+        return "CandidatoFX{" + "nome=" + nome + ", cognome=" + cognome + ", eta=" + eta + ", partito=" + partito + ", Sesso=" + Sesso + '}' + "\n";
     }
     
     

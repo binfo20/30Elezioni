@@ -49,7 +49,7 @@ public class VotanteFX implements Serializable  {
 
     @Override
     public String toString() {
-        return "VotanteFX{" + "eta=" + eta + ", email=" + email + ", pin=" + pin + '}';
+        return "VotanteFX{" + "eta=" + eta + ", email=" + email + ", pin=" + pin + '}' + "\n";
     }
 
     

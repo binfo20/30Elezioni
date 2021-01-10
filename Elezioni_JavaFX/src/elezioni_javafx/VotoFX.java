@@ -27,7 +27,7 @@ public class VotoFX {
 
     @Override
     public String toString() {
-        return "VotoFX{" + "voto=" + voto + '}';
+        return "VotoFX{" + "voto=" + voto + '}'+ "\n";
     }
 
     
