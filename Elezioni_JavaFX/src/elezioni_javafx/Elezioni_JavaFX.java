@@ -17,6 +17,11 @@ import javafx.stage.Stage;
  */
 public class Elezioni_JavaFX extends Application {
     
+    String nomecandidato,cognomecandidato;
+    
+    
+    
+    
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Menu.fxml"));

@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -53,7 +54,7 @@ public class MenuController implements Initializable {
     @FXML
     private TextField eta_votante;
     @FXML
-    private TextField partito_votante;
+    private ChoiceBox partito_votante;
     
     @FXML
     private void attiva(MouseEvent event){
@@ -61,6 +62,17 @@ public class MenuController implements Initializable {
         stampa_lista_candidati.setDisable(false);
         cancella_tutto.setDisable(false);
         stampa_voti.setDisable(false);
+    }
+    
+    @FXML
+    private void salva_votante(MouseEvent event){
+        //
+    }
+    
+    @FXML
+    private void salva_candidato(MouseEvent event){
+        //
+        partito_votante.getItems().add("buuu");
     }
     
     @FXML
