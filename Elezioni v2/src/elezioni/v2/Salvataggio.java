@@ -46,11 +46,11 @@ public class Salvataggio implements Serializable {
 		FileWriter fwrite = new FileWriter("Liste.txt");
                 fwrite.write("\nELENCO VOTANTI\n");
 		for(int i=0;i< ListaVotanti.size();i++){
-                    fwrite.write("\nVotante numero "+ (i+1) +ListaVotanti.get(i));
+                    fwrite.write("Votante numero "+ (i+1) +ListaVotanti.get(i));
                 }
                 fwrite.write("\nELENCO CANDIDATI\n");
                 for(int h=0;h<ListaCanditati.size(); h++){
-                    fwrite.write("\nCandidato numero "+ (h+1)+ ListaCanditati.get(h));
+                    fwrite.write("Candidato numero "+ (h+1)+ ListaCanditati.get(h));
                 }
                        
 		
