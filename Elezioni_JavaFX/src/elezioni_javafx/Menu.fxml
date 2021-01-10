@@ -13,33 +13,33 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<TabPane prefHeight="429.0" prefWidth="406.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="elezioni_javafx.MenuController">
+<TabPane prefHeight="429.0" prefWidth="529.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="elezioni_javafx.MenuController">
   <tabs>
     <Tab text="MENU">
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="349.0" prefWidth="392.0">
                <children>
-                  <Text layoutY="29.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCESSO CONSENTITO SOLO A PERSONE AUTORIZZATE" textAlignment="CENTER" wrappingWidth="406.0">
+                  <Text layoutX="62.0" layoutY="29.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCESSO CONSENTITO SOLO A PERSONE AUTORIZZATE" textAlignment="CENTER" wrappingWidth="406.0">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <Button id="autorizzazione" fx:id="autorizzazione" alignment="CENTER" layoutX="125.0" layoutY="70.0" mnemonicParsing="false" onAction="#attiva" onMouseClicked="#attiva" onMousePressed="#attiva" text="SONO AUTORIZZATO">
+                  <Button id="autorizzazione" fx:id="autorizzazione" alignment="CENTER" layoutX="187.0" layoutY="70.0" mnemonicParsing="false" onAction="#attiva" onMouseClicked="#attiva" onMousePressed="#attiva" text="SONO AUTORIZZATO">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="stampa_lista_candidati" alignment="CENTER" disable="true" layoutX="106.0" layoutY="215.0" mnemonicParsing="false" onAction="#stampalistacandidati" onMouseClicked="#stampalistacandidati" onMousePressed="#stampalistacandidati" text="STAMPA LISTA CANDIDATI">
+                  <Button fx:id="stampa_lista_candidati" alignment="CENTER" disable="true" layoutX="168.0" layoutY="215.0" mnemonicParsing="false" onAction="#stampalistacandidati" onMouseClicked="#stampalistacandidati" onMousePressed="#stampalistacandidati" text="STAMPA LISTA CANDIDATI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="stampa_lista_votanti" alignment="CENTER" disable="true" layoutX="113.0" layoutY="174.0" mnemonicParsing="false" onAction="#stampalistavotanti" onMouseClicked="#stampalistavotanti" onMousePressed="#stampalistavotanti" text="STAMPA LISTA VOTANTI">
+                  <Button fx:id="stampa_lista_votanti" alignment="CENTER" disable="true" layoutX="175.0" layoutY="174.0" mnemonicParsing="false" onAction="#stampalistavotanti" onMouseClicked="#stampalistavotanti" onMousePressed="#stampalistavotanti" text="STAMPA LISTA VOTANTI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="stampa_voti" alignment="CENTER" disable="true" layoutX="149.0" layoutY="131.0" mnemonicParsing="false" onAction="#stampavoti" onMouseClicked="#stampavoti" onMousePressed="#stampavoti" text="STAMPA VOTI">
+                  <Button fx:id="stampa_voti" alignment="CENTER" disable="true" layoutX="211.0" layoutY="131.0" mnemonicParsing="false" onAction="#stampavoti" onMouseClicked="#stampavoti" onMousePressed="#stampavoti" text="STAMPA VOTI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
@@ -51,31 +51,31 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="396.0">
                <children>
-                  <TextField fx:id="email_votante" layoutX="29.0" layoutY="85.0" promptText="MAIL" />
-                  <TextField fx:id="pin_votante" accessibleRole="PASSWORD_FIELD" layoutX="29.0" layoutY="138.0" promptText="PIN" />
-                  <TextField fx:id="eta_votante" layoutX="29.0" layoutY="201.0" promptText="ETA" />
-                  <ImageView fitHeight="97.0" fitWidth="155.0" layoutX="244.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+                  <TextField fx:id="email_votante" layoutX="80.0" layoutY="85.0" promptText="MAIL" />
+                  <TextField fx:id="pin_votante" accessibleRole="PASSWORD_FIELD" layoutX="80.0" layoutY="138.0" promptText="PIN" />
+                  <TextField fx:id="eta_votante" layoutX="80.0" layoutY="201.0" promptText="ETA" />
+                  <ImageView fitHeight="97.0" fitWidth="155.0" layoutX="295.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@2345.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="48.0" layoutY="29.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="DEVI VOTARE? SEI NEL POSTO GIUSTO!" textAlignment="CENTER">
+                  <Text layoutX="99.0" layoutY="29.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="DEVI VOTARE? SEI NEL POSTO GIUSTO!" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <Text layoutX="84.0" layoutY="49.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPILA IL FORM QUA SOTTO" textAlignment="CENTER">
+                  <Text layoutX="135.0" layoutY="49.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPILA IL FORM QUA SOTTO" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <Button fx:id="vota" layoutX="286.0" layoutY="227.0" mnemonicParsing="false" onAction="#salva_votante" onMouseClicked="#salva_votante" onMousePressed="#salva_votante" text="VOTA">
+                  <Button fx:id="vota" layoutX="337.0" layoutY="227.0" mnemonicParsing="false" onAction="#salva_votante" onMouseClicked="#salva_votante" onMousePressed="#salva_votante" text="VOTA">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <ChoiceBox fx:id="partito_votante" layoutX="28.0" layoutY="279.0" prefWidth="150.0" />
-                  <Text layoutX="44.0" layoutY="269.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Partito Votante" textAlignment="CENTER">
+                  <ChoiceBox fx:id="partito_votante" layoutX="79.0" layoutY="279.0" prefWidth="150.0" />
+                  <Text layoutX="95.0" layoutY="269.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Partito Votante" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
@@ -87,32 +87,32 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="354.0" prefWidth="395.0">
                <children>
-                  <TextField fx:id="nome_candidato" layoutX="24.0" layoutY="75.0" promptText="NOME" />
-                  <ImageView fitHeight="129.0" fitWidth="155.0" layoutX="248.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                  <TextField fx:id="nome_candidato" layoutX="88.0" layoutY="75.0" promptText="NOME" />
+                  <ImageView fitHeight="129.0" fitWidth="155.0" layoutX="312.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@48744.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="candidati" layoutX="267.0" layoutY="243.0" mnemonicParsing="false" onAction="#salva_candidato" onMouseClicked="#salva_candidato" onMousePressed="#salva_candidato" text="CANDIDATI">
+                  <Button fx:id="candidati" layoutX="331.0" layoutY="243.0" mnemonicParsing="false" onAction="#salva_candidato" onMouseClicked="#salva_candidato" onMousePressed="#salva_candidato" text="CANDIDATI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Text layoutX="32.0" layoutY="29.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="DEVI CANDIDARTI? SEI NEL POSTO GIUSTO!" textAlignment="CENTER">
+                  <Text layoutX="96.0" layoutY="29.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="DEVI CANDIDARTI? SEI NEL POSTO GIUSTO!" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <Text layoutX="84.0" layoutY="49.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPILA IL FORM QUA SOTTO" textAlignment="CENTER">
+                  <Text layoutX="148.0" layoutY="49.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPILA IL FORM QUA SOTTO" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="cognome_candidato" layoutX="24.0" layoutY="127.0" promptText="COGNOME" />
-                  <TextField fx:id="eta_candidato" layoutX="24.0" layoutY="187.0" promptText="ETA" />
-                  <TextField fx:id="partito_candidato" layoutX="24.0" layoutY="243.0" promptText="PARTITO" />
-                  <RadioButton fx:id="sesso_maschio" layoutX="24.0" layoutY="295.0" mnemonicParsing="false" onAction="#scelta_sesso" onMouseClicked="#scelta_sesso" onMousePressed="#scelta_sesso" text="M" />
-                  <RadioButton fx:id="sesso_femmina" layoutX="24.0" layoutY="323.0" mnemonicParsing="false" onAction="#scelta_sesso" onMouseClicked="#scelta_sesso" onMousePressed="#scelta_sesso" text="F" />
+                  <TextField fx:id="cognome_candidato" layoutX="88.0" layoutY="127.0" promptText="COGNOME" />
+                  <TextField fx:id="eta_candidato" layoutX="88.0" layoutY="187.0" promptText="ETA" />
+                  <TextField fx:id="partito_candidato" layoutX="88.0" layoutY="243.0" promptText="PARTITO" />
+                  <RadioButton fx:id="sesso_maschio" layoutX="88.0" layoutY="295.0" mnemonicParsing="false" onAction="#scelta_sesso" onMouseClicked="#scelta_sesso" onMousePressed="#scelta_sesso" text="M" />
+                  <RadioButton fx:id="sesso_femmina" layoutX="88.0" layoutY="323.0" mnemonicParsing="false" onAction="#scelta_sesso" onMouseClicked="#scelta_sesso" onMousePressed="#scelta_sesso" text="F" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -120,12 +120,12 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="354.0" prefWidth="395.0">
                <children>
-                  <Text layoutX="134.0" layoutY="19.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="SEZIONE STAMPE" textAlignment="CENTER">
+                  <Text layoutX="195.0" layoutY="19.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="SEZIONE STAMPE" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <TextArea fx:id="stampotutto" editable="false" layoutX="12.0" layoutY="25.0" prefHeight="356.0" prefWidth="382.0" promptText="STAMPO TUTTO">
+                  <TextArea fx:id="stampotutto" editable="false" layoutX="12.0" layoutY="25.0" prefHeight="356.0" prefWidth="502.0" promptText="STAMPO TUTTO">
                      <font>
                         <Font size="17.0" />
                      </font>
