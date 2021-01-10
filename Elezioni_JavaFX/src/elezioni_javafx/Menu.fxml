@@ -73,7 +73,7 @@
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <Button fx:id="vota" layoutX="286.0" layoutY="227.0" mnemonicParsing="false" text="VOTA">
+                  <Button fx:id="vota" layoutX="286.0" layoutY="227.0" mnemonicParsing="false" onAction="#salva_votante" onMouseClicked="#salva_votante" onMousePressed="#salva_votante" text="VOTA">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>

@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
@@ -22,7 +23,7 @@ import javafx.scene.input.MouseEvent;
  */
 public class MenuController implements Initializable {
     
-    ArrayList <VotanteFX> listaVotanti = new ArrayList<VotanteFX>();
+    ArrayList <VotanteFX> listaVotanti = new ArrayList<>();
     
     String nomecandidato, cognomecandidato, etacandidato,
            partitocandidato, sessocandidato;
@@ -62,6 +63,8 @@ public class MenuController implements Initializable {
     @FXML
     private TextField eta_votante;
     @FXML
+    private TextArea hosalvatoilvotante;
+    @FXML
     private ChoiceBox partito_votante;
     
     @FXML
@@ -72,18 +75,48 @@ public class MenuController implements Initializable {
         stampa_voti.setDisable(false);
     }
     
+    
+    
     @FXML
-    private void salva_votante(MouseEvent event){
+    private void salva_votante(MouseEvent event) throws InterruptedException{
         mailvotante=email_votante.getText();
+        if("".equals(mailvotante)){
+            email_votante.setPromptText("SCRIVI LA MAIL");
+            return;
+        }
         pinvotante=pin_votante.getText();
+        if("".equals(pinvotante)){
+            pin_votante.setPromptText("SCRIVI IL PIN");
+            return;
+        }
         etavotante=eta_votante.getText();
+        if("".equals(etavotante)){
+            eta_votante.setPromptText("SCRIVI L'ETA");
+            return;
+        }
         partitovotante=(String)partito_votante.getValue();
+        if("".equals(partitovotante)){
+            partito_votante.setValue(0);
+            return;
+        }
+        listaVotanti.add(new VotanteFX(etavotante,mailvotante,pinvotante));
+        Thread.sleep(3000);
+        email_votante.setText("");
+        pin_votante.setText("");
+        eta_votante.setText("");
+        partito_votante.setValue(null);
+        hosalvatoilvotante.setVisible(false);
     }
     
     @FXML
     private void salva_candidato(MouseEvent event){
-        //
-        partito_votante.getItems().add("buuu");
+        nomecandidato=nome_candidato.getText();
+        cognomecandidato=cognome_candidato.getText();
+        etacandidato=eta_candidato.getText();
+        partitocandidato=partito_candidato.getText();
+        if(sesso_maschio.isSelected())sessocandidato=sesso_maschio.getText();
+        else sessocandidato=sesso_femmina.getText();
+        partito_votante.getItems().add(partitocandidato);
     }
     
     @FXML
@@ -96,7 +129,7 @@ public class MenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        partito_votante.getItems().add("SCEGLI PARTITO");
     }    
     
 }
