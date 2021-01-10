@@ -21,6 +21,11 @@ import javafx.scene.input.MouseEvent;
  */
 public class MenuController implements Initializable {
     
+    String nomecandidato, cognomecandidato, etacandidato,
+           partitocandidato, sessocandidato;
+    
+    String mailvotante,pinvotante,etavotante;
+    
     @FXML
     private Button autorizzazione;
     @FXML
@@ -66,7 +71,7 @@ public class MenuController implements Initializable {
     
     @FXML
     private void salva_votante(MouseEvent event){
-        //
+        mailvotante=email_votante.getText();
     }
     
     @FXML
@@ -89,3 +94,4 @@ public class MenuController implements Initializable {
     }    
     
 }
+
