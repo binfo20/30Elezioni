@@ -1,3 +1,0 @@
-ELENCO VOTANTI
-votante numero 1Votante{eta=5, email=5, pin=5}votante numero 2Votante{eta=5, email=5, pin=5}ELENCO CANDIDATI
-votante numero 1Candidato{nome=5, cognome=5, eta=5, partito=5, isMale=false}votante numero 2Candidato{nome=5, cognome=5555, eta=5, partito=5, isMale=false}votante numero 3Candidato{nome=55, cognome=5, eta=55, partito=55, isMale=false}votante numero 4Candidato{nome=555, cognome=5, eta=5, partito=5, isMale=false}votante numero 5Candidato{nome=5, cognome=5, eta=5, partito=55, isMale=false}
