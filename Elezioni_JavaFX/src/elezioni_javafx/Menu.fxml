@@ -97,7 +97,7 @@
                         <Image url="@48744.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="candidati" layoutX="267.0" layoutY="243.0" mnemonicParsing="false" text="CANDIDATI">
+                  <Button fx:id="candidati" layoutX="267.0" layoutY="243.0" mnemonicParsing="false" onAction="#salva_candidato" onMouseClicked="#salva_candidato" onMousePressed="#salva_candidato" text="CANDIDATI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>

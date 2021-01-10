@@ -24,6 +24,8 @@ import javafx.scene.input.MouseEvent;
 public class MenuController implements Initializable {
     
     ArrayList <VotanteFX> listaVotanti = new ArrayList<>();
+    ArrayList<CandidatoFX>listaCandidati= new ArrayList<CandidatoFX>();
+    ArrayList<VotoFX>listaVoti= new ArrayList<VotoFX>();
     
     String nomecandidato, cognomecandidato, etacandidato,
            partitocandidato, sessocandidato;
@@ -78,7 +80,7 @@ public class MenuController implements Initializable {
     
     
     @FXML
-    private void salva_votante(MouseEvent event) throws InterruptedException{
+    private void salva_votante(MouseEvent event){
         mailvotante=email_votante.getText();
         if("".equals(mailvotante)){
             email_votante.setPromptText("SCRIVI LA MAIL");
@@ -96,27 +98,59 @@ public class MenuController implements Initializable {
         }
         partitovotante=(String)partito_votante.getValue();
         if("".equals(partitovotante)){
-            partito_votante.setValue(0);
+            partito_votante.show();
             return;
         }
         listaVotanti.add(new VotanteFX(etavotante,mailvotante,pinvotante));
-        Thread.sleep(3000);
+        listaVoti.add(new VotoFX(partitovotante));
         email_votante.setText("");
         pin_votante.setText("");
         eta_votante.setText("");
+        email_votante.setPromptText("MAIL");
+        pin_votante.setPromptText("PIN");
+        eta_votante.setPromptText("ETA");
         partito_votante.setValue(null);
-        hosalvatoilvotante.setVisible(false);
     }
     
     @FXML
     private void salva_candidato(MouseEvent event){
         nomecandidato=nome_candidato.getText();
+        if("".equals(nomecandidato)){
+             nome_candidato.setPromptText("SCRIVI IL NOME");
+            return;
+        }
         cognomecandidato=cognome_candidato.getText();
+        if("".equals(cognomecandidato)){
+             cognome_candidato.setPromptText("SCRIVI IL COGNOME");
+            return;
+        }
         etacandidato=eta_candidato.getText();
+        if("".equals(etacandidato)){
+             eta_candidato.setPromptText("SCRIVI L'ETA");
+            return;
+        }
         partitocandidato=partito_candidato.getText();
+        if("".equals(partitocandidato)){
+             partito_candidato.setPromptText("SCRIVI il COGNOME");
+            return;
+        }
         if(sesso_maschio.isSelected())sessocandidato=sesso_maschio.getText();
-        else sessocandidato=sesso_femmina.getText();
+            else if(sesso_femmina.isSelected())sessocandidato=sesso_femmina.getText();
+                else {
+                return;
+            }
+        listaCandidati.add(new CandidatoFX(nomecandidato,cognomecandidato,etacandidato,partitocandidato,sessocandidato));
         partito_votante.getItems().add(partitocandidato);
+        nome_candidato.setText("");
+        cognome_candidato.setText("");
+        eta_candidato.setText("");
+        partito_candidato.setText("");
+        nome_candidato.setPromptText("NOME");
+        cognome_candidato.setPromptText("COGNOME");
+        eta_candidato.setPromptText("ETA");
+        partito_candidato.setPromptText("PARTITO");
+        sesso_femmina.setSelected(false);
+        sesso_maschio.setSelected(false);
     }
     
     @FXML
@@ -125,11 +159,27 @@ public class MenuController implements Initializable {
        if(sesso_femmina.isPressed())sesso_maschio.setSelected(false);
     }
     
-    
+    @FXML
+    private void stampavoti(MouseEvent event){
+       
+    }
+    @FXML
+    private void stampalistavotanti(MouseEvent event){
+       
+    }
+    @FXML
+    private void stampalistacandidati(MouseEvent event){
+       
+    }
 
+    @FXML
+    private void cancellatutto(MouseEvent event){
+       
+    }
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        partito_votante.getItems().add("SCEGLI PARTITO");
     }    
     
 }
