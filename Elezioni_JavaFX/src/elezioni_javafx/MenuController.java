@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -37,6 +38,22 @@ public class MenuController implements Initializable {
     private RadioButton sesso_maschio;
     @FXML
     private RadioButton sesso_femmina;
+    @FXML
+    private TextField nome_candidato;
+    @FXML
+    private TextField cognome_candidato;
+    @FXML
+    private TextField eta_candidato;
+    @FXML
+    private TextField partito_candidato;
+    @FXML
+    private TextField email_votante;
+    @FXML
+    private TextField pin_votante;
+    @FXML
+    private TextField eta_votante;
+    @FXML
+    private TextField partito_votante;
     
     @FXML
     private void attiva(MouseEvent event){

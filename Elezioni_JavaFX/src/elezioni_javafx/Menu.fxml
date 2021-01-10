@@ -54,10 +54,10 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="396.0">
                <children>
-                  <TextField layoutX="29.0" layoutY="85.0" promptText="MAIL" />
-                  <TextField accessibleRole="PASSWORD_FIELD" layoutX="29.0" layoutY="138.0" promptText="PIN" />
-                  <TextField layoutX="29.0" layoutY="201.0" promptText="ETA" />
-                  <TextField layoutX="29.0" layoutY="259.0" promptText="PARTITO VOTANTE" />
+                  <TextField fx:id="email_votante" layoutX="29.0" layoutY="85.0" promptText="MAIL" />
+                  <TextField fx:id="pin_votante" accessibleRole="PASSWORD_FIELD" layoutX="29.0" layoutY="138.0" promptText="PIN" />
+                  <TextField fx:id="eta_votante" layoutX="29.0" layoutY="201.0" promptText="ETA" />
+                  <TextField fx:id="partito_votante" layoutX="29.0" layoutY="259.0" promptText="PARTITO VOTANTE" />
                   <ImageView fitHeight="97.0" fitWidth="155.0" layoutX="244.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@2345.png" />
@@ -85,7 +85,7 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="354.0" prefWidth="395.0">
                <children>
-                  <TextField layoutX="24.0" layoutY="75.0" promptText="NOME" />
+                  <TextField fx:id="nome_candidato" layoutX="24.0" layoutY="75.0" promptText="NOME" />
                   <ImageView fitHeight="129.0" fitWidth="155.0" layoutX="248.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@48744.png" />
@@ -106,9 +106,9 @@
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="24.0" layoutY="127.0" promptText="COGNOME" />
-                  <TextField layoutX="24.0" layoutY="187.0" promptText="ETA" />
-                  <TextField layoutX="24.0" layoutY="243.0" promptText="PARTITO" />
+                  <TextField fx:id="cognome_candidato" layoutX="24.0" layoutY="127.0" promptText="COGNOME" />
+                  <TextField fx:id="eta_candidato" layoutX="24.0" layoutY="187.0" promptText="ETA" />
+                  <TextField fx:id="partito_candidato" layoutX="24.0" layoutY="243.0" promptText="PARTITO" />
                   <RadioButton fx:id="sesso_maschio" layoutX="24.0" layoutY="295.0" mnemonicParsing="false" onAction="#scelta_sesso" onMouseClicked="#scelta_sesso" onMousePressed="#scelta_sesso" text="M" />
                   <RadioButton fx:id="sesso_femmina" layoutX="24.0" layoutY="323.0" mnemonicParsing="false" onAction="#scelta_sesso" onMouseClicked="#scelta_sesso" onMousePressed="#scelta_sesso" text="F" />
                </children></AnchorPane>
