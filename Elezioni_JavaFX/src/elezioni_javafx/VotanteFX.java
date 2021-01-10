@@ -47,6 +47,11 @@ public class VotanteFX implements Serializable  {
         this.pin = pin;
     }
 
+    @Override
+    public String toString() {
+        return "VotanteFX{" + "eta=" + eta + ", email=" + email + ", pin=" + pin + '}';
+    }
+
     
     
     

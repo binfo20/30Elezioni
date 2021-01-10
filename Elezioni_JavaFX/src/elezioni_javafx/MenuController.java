@@ -23,7 +23,7 @@ import javafx.scene.input.MouseEvent;
  */
 public class MenuController implements Initializable {
     
-    ArrayList <VotanteFX> listaVotanti = new ArrayList<>();
+    ArrayList <VotanteFX> listaVotanti = new ArrayList<VotanteFX>();
     ArrayList<CandidatoFX>listaCandidati= new ArrayList<CandidatoFX>();
     ArrayList<VotoFX>listaVoti= new ArrayList<VotoFX>();
     
@@ -40,8 +40,6 @@ public class MenuController implements Initializable {
     private Button stampa_lista_votanti;
     @FXML
     private Button stampa_lista_candidati;
-    @FXML
-    private Button cancella_tutto;
     @FXML
     private Button vota;
     @FXML
@@ -65,8 +63,6 @@ public class MenuController implements Initializable {
     @FXML
     private TextField eta_votante;
     @FXML
-    private TextArea hosalvatoilvotante;
-    @FXML
     private TextArea stampotutto;
     @FXML
     private ChoiceBox partito_votante;
@@ -75,7 +71,6 @@ public class MenuController implements Initializable {
     private void attiva(MouseEvent event){
         stampa_lista_votanti.setDisable(false);
         stampa_lista_candidati.setDisable(false);
-        cancella_tutto.setDisable(false);
         stampa_voti.setDisable(false);
     }
     
@@ -164,20 +159,17 @@ public class MenuController implements Initializable {
     @FXML
     private void stampavoti(MouseEvent event){
        
+       stampotutto.setText(listaVoti.toString());
     }
     @FXML
     private void stampalistavotanti(MouseEvent event){
-       
+       stampotutto.setText(listaVotanti.toString());
     }
     @FXML
     private void stampalistacandidati(MouseEvent event){
-       
+       stampotutto.setText(listaCandidati.toString());
     }
 
-    @FXML
-    private void cancellatutto(MouseEvent event){
-       
-    }
     
     
     @Override

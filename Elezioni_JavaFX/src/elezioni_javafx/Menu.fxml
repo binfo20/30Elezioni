@@ -29,22 +29,17 @@
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="stampa_lista_candidati" alignment="CENTER" disable="true" layoutX="106.0" layoutY="215.0" mnemonicParsing="false" text="STAMPA LISTA CANDIDATI">
+                  <Button fx:id="stampa_lista_candidati" alignment="CENTER" disable="true" layoutX="106.0" layoutY="215.0" mnemonicParsing="false" onAction="#stampalistacandidati" onMouseClicked="#stampalistacandidati" onMousePressed="#stampalistacandidati" text="STAMPA LISTA CANDIDATI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="stampa_lista_votanti" alignment="CENTER" disable="true" layoutX="113.0" layoutY="174.0" mnemonicParsing="false" text="STAMPA LISTA VOTANTI">
+                  <Button fx:id="stampa_lista_votanti" alignment="CENTER" disable="true" layoutX="113.0" layoutY="174.0" mnemonicParsing="false" onAction="#stampalistavotanti" onMouseClicked="#stampalistavotanti" onMousePressed="#stampalistavotanti" text="STAMPA LISTA VOTANTI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="stampa_voti" alignment="CENTER" disable="true" layoutX="149.0" layoutY="131.0" mnemonicParsing="false" text="STAMPA VOTI">
-                     <font>
-                        <Font name="Arial Black" size="12.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="cancella_tutto" alignment="CENTER" disable="true" layoutX="134.0" layoutY="348.0" mnemonicParsing="false" text="CANCELLA TUTTO">
+                  <Button fx:id="stampa_voti" alignment="CENTER" disable="true" layoutX="149.0" layoutY="131.0" mnemonicParsing="false" onAction="#stampavoti" onMouseClicked="#stampavoti" onMousePressed="#stampavoti" text="STAMPA VOTI">
                      <font>
                         <Font name="Arial Black" size="12.0" />
                      </font>
@@ -130,9 +125,9 @@
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Text>
-                  <TextArea editable="false" layoutX="12.0" layoutY="25.0" prefHeight="356.0" prefWidth="382.0">
+                  <TextArea fx:id="stampotutto" editable="false" layoutX="12.0" layoutY="25.0" prefHeight="356.0" prefWidth="382.0" promptText="STAMPO TUTTO">
                      <font>
-                        <Font size="10.0" />
+                        <Font size="17.0" />
                      </font>
                   </TextArea>
                </children></AnchorPane>
