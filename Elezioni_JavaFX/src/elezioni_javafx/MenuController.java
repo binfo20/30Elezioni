@@ -5,6 +5,7 @@
  */
 package elezioni_javafx;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -45,6 +46,8 @@ public class MenuController implements Initializable {
     @FXML
     private Button candidati;
     @FXML
+    private Button stampa_su_file;
+    @FXML
     private RadioButton sesso_maschio;
     @FXML
     private RadioButton sesso_femmina;
@@ -72,6 +75,7 @@ public class MenuController implements Initializable {
         stampa_lista_votanti.setDisable(false);
         stampa_lista_candidati.setDisable(false);
         stampa_voti.setDisable(false);
+        stampa_su_file.setDisable(false);
     }
     
     
@@ -165,9 +169,17 @@ public class MenuController implements Initializable {
     private void stampalistavotanti(MouseEvent event){
        stampotutto.setText(listaVotanti.toString());
     }
+    
+
     @FXML
     private void stampalistacandidati(MouseEvent event){
        stampotutto.setText(listaCandidati.toString());
+    }
+    
+    @FXML
+    private void stampasufile(MouseEvent event) throws IOException{
+       SalvataggioFX s = new SalvataggioFX();
+       s.stampaSuFile(listaCandidati,listaVotanti,listaVoti);
     }
 
     

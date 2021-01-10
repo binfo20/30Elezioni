@@ -44,6 +44,11 @@
                         <Font name="Arial Black" size="12.0" />
                      </font>
                   </Button>
+                  <Button fx:id="stampa_su_file" alignment="CENTER" disable="true" layoutX="142.0" layoutY="259.0" mnemonicParsing="false" onAction="#stampasufile" onMouseClicked="#stampasufile" onMousePressed="#stampasufile" text="STAMPA TUTTO SU FILE DI TESTO">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Button>
                </children></AnchorPane>
       </content>
     </Tab>

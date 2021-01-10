@@ -46,18 +46,23 @@ public class SalvataggioFX {
         
         return "Salvo "+ v.toString() ;
     }
-    public static void stampaSuFile(ArrayList<CandidatoFX>ListaCanditati , ArrayList<VotanteFX>ListaVotanti) throws IOException {
+    public void stampaSuFile(ArrayList<CandidatoFX>ListaCanditati , ArrayList<VotanteFX>ListaVotanti, ArrayList<VotoFX>ListaVoti ) throws IOException {
 		FileWriter fwrite = new FileWriter("Liste.txt");
-                fwrite.write("ELENCO VOTANTI\n");
+                fwrite.write("\nELENCO VOTANTI\n");
 		for(int i=0;i< ListaVotanti.size();i++){
-                    fwrite.write("votante numero "+ (i+1) +ListaVotanti.get(i));
+                    fwrite.write("Votante numero "+ (i+1) +ListaVotanti.get(i));
                 }
-                fwrite.write("ELENCO CANDIDATI\n");
+                fwrite.write("\nELENCO CANDIDATI\n");
                 for(int h=0;h<ListaCanditati.size(); h++){
-                    fwrite.write("votante numero "+ (h+1)+ ListaCanditati.get(h));
+                    fwrite.write("Candidato numero "+ (h+1)+ ListaCanditati.get(h));
+                }
+                fwrite.write("\nELENCO VOTI\n");
+                for(int h=0;h<ListaVoti.size(); h++){
+                    fwrite.write("Voto numero "+ (h+1)+ ListaVoti.get(h));
                 }
                        
 		
 		fwrite.close();
 	}
+
 }
