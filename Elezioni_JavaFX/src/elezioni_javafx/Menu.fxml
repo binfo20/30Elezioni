@@ -5,6 +5,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -117,6 +118,23 @@
                   <TextField fx:id="partito_candidato" layoutX="24.0" layoutY="243.0" promptText="PARTITO" />
                   <RadioButton fx:id="sesso_maschio" layoutX="24.0" layoutY="295.0" mnemonicParsing="false" onAction="#scelta_sesso" onMouseClicked="#scelta_sesso" onMousePressed="#scelta_sesso" text="M" />
                   <RadioButton fx:id="sesso_femmina" layoutX="24.0" layoutY="323.0" mnemonicParsing="false" onAction="#scelta_sesso" onMouseClicked="#scelta_sesso" onMousePressed="#scelta_sesso" text="F" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+     <Tab text="STAMPE">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="354.0" prefWidth="395.0">
+               <children>
+                  <Text layoutX="134.0" layoutY="19.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="SEZIONE STAMPE" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextArea editable="false" layoutX="12.0" layoutY="25.0" prefHeight="356.0" prefWidth="382.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextArea>
                </children></AnchorPane>
       </content>
     </Tab>

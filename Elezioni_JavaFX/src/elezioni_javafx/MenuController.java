@@ -67,6 +67,8 @@ public class MenuController implements Initializable {
     @FXML
     private TextArea hosalvatoilvotante;
     @FXML
+    private TextArea stampotutto;
+    @FXML
     private ChoiceBox partito_votante;
     
     @FXML
