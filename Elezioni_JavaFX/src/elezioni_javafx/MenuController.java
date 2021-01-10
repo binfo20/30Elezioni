@@ -6,6 +6,7 @@
 package elezioni_javafx;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -21,10 +22,12 @@ import javafx.scene.input.MouseEvent;
  */
 public class MenuController implements Initializable {
     
+    ArrayList <VotanteFX> listaVotanti = new ArrayList<VotanteFX>();
+    
     String nomecandidato, cognomecandidato, etacandidato,
            partitocandidato, sessocandidato;
     
-    String mailvotante,pinvotante,etavotante;
+    String mailvotante,pinvotante,etavotante,partitovotante;
     
     @FXML
     private Button autorizzazione;
@@ -72,6 +75,9 @@ public class MenuController implements Initializable {
     @FXML
     private void salva_votante(MouseEvent event){
         mailvotante=email_votante.getText();
+        pinvotante=pin_votante.getText();
+        etavotante=eta_votante.getText();
+        partitovotante=(String)partito_votante.getValue();
     }
     
     @FXML
