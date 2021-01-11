@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"elezioni.v2","l":"Candidato"},{"p":"elezioni.v2","l":"ElezioniV2"},{"p":"elezioni.v2","l":"ListaCandidati"},{"p":"elezioni.v2","l":"ListaVotanti"},{"p":"elezioni.v2","l":"ListaVoti"},{"p":"elezioni.v2","l":"Salvataggio"},{"p":"elezioni.v2","l":"Votante"},{"p":"elezioni.v2","l":"Voto"}]
